@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Persone</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <h1 class="text-2xl font-bold">Modulo inserimento persone</h1>
+    <div class="form1">
+    <form id="formPersone" action="saluto.html" method="post" onsubmit="return inviaModulo()">
+    <fieldset>
+        <legend class="font-mono text-2xl pb-3">Dati Personali</legend>
+        
+        <label for="nome" class="font-mono text-lg">Nome:</label><br>
+        <input type="text" id="nome" name="nome" required><br>
+        
+        <label for="cognome" class="font-mono text-lg">Cognome:</label><br>
+        <input type="text" id="cognome" name="cognome" required><br>
+
+        <label for="email" class="font-mono text-lg">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="birthday" class="font-mono text-lg">Data di Nascita:</label><br>
+        <input type="date" id="birthday" name="birthday" required><br>
+
+        <label for="telefono" class="font-mono text-lg">Numero di Telefono:</label><br>
+        <input type="tel" id="telefono" name="telefono" required><br>
+
+        <label for="paese" class="font-mono text-lg">Paese:</label><br>
+        <input type="text" id="paese" name="paese" required><br>
+
+        <label for="provincia" class="font-mono text-lg">Provincia:</label><br>
+        <input type="text" id="provincia" name="provincia" required><br>
+    </fieldset>
+    </form>
+    </div>
+    <div class="form1 pt-5 pb-5">
+        <br>
+        <button type="button" class="btn btn-accent btn-outline m-3" onclick="aggiungiPersona()">Aggiungi Persona</button>
+        <button type="button" class="btn btn-accent btn-outline m-3" onclick="rimuoviTutti()">Rimuovi Tutti</button>
+        <button type="submit" class="btn btn-accent btn-outline m-3" onclick="inviaModulo()">Invia Modulo</button>
+        
+    </div>    
+</form>
+
+ 
+<table id="tabellaPersone">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Cognome</th>
+            <th>Email</th>
+            <th>Data di Nascita</th>
+            <th>Telefono</th>
+            <th>Paese</th>
+            <th>Provincia</th>
+            <th>Azioni</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+<script type="text/javascript" src="script.js"></script>
+ 
+</body>
+</html>
